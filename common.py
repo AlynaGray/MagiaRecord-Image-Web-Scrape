@@ -46,7 +46,7 @@ def scrape(asset: str) -> None:
             if content == NONEXISTENT_ASSET_PAGE:
                 return
             with open(Path(asset), mode="wb") as file:
-                print(f"{GREEN}Found {asset}{RESET}!")
+                print(f"{GREEN}Found {asset}!{RESET}")
                 os.makedirs(os.path.dirname(Path(asset)), exist_ok=True)
                 file.write(response.read())
 
