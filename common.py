@@ -24,8 +24,13 @@ def scrape_all(candidates: callable) -> None:
     
     with ThreadPoolExecutor(max_workers=50) as executor:
         for asset in candidates():
-            print(f"Scraping: {asset}")
-            executor.submit(scrape(asset))
+            while True:
+                try:
+                    print(f"Scraping: {asset}")
+                    executor.submit(scrape(asset))
+                except Exception as e:
+                    print(f"{type(e): {e}}")
+
 
 def scrape(asset: str) -> None:
     # asset is the portion after the domain, without the leading /
