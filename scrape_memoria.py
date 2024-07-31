@@ -1,5 +1,6 @@
 #! /usr/bin/env python3
 
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 import urllib.request
 import os
@@ -19,9 +20,10 @@ def memoria_candidates() -> Generator[str, None, None]:
         yield f"{part1}{part2}{part3}"
 
 def scrape_memoria() -> None:
-    for asset in memoria_candidates():
-        print(f"Scraping: {asset}")
-        scrape(asset)
+    with ThreadPoolExecutor(max_workers=5) as executor:
+        for asset in memoria_candidates():
+            print(f"Scraping: {asset}")
+            executor.submit(scrape(asset))
 
 def scrape(asset: str) -> None:
     # asset is the portion after the domain, without the leading /
