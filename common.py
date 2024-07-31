@@ -28,6 +28,7 @@ def scrape_all(candidates: callable) -> None:
                 try:
                     print(f"Scraping: {asset}")
                     executor.submit(scrape(asset))
+                    break
                 except Exception as e:
                     print(f"{type(e): {e}}")
 
