@@ -4,6 +4,8 @@ This is a semi-manual scrape of Magia Record's `magica/resource/image_web` direc
 
 Although EoS has already occurred, the asset servers are still online. I guess the servers will stay up while the archive app is sitll available to download, which is until October 14, 2024.
 
+Entries are marked whether they're scrapped before EoS just in case the assets in the servers changed after that date.
+
 ## scrape_memora.py
 
 Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/view/memoria/MemoriaComposeTopUseMaterialView.js#L72)
