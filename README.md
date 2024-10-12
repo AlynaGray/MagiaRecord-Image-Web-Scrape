@@ -39,6 +39,16 @@ Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9
 
 I can't figure out the format for `a.charaId` because I haven't found any examples of this asset in the archives.
 
+## scrape_memoria_thumbs.py
+
+Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/event/dailytower/EventDailyTowerTop.js#L675C1-L675C298)
+
+```js
+"/magica/resource/image_web/event/dailytower/common/" + ("memoria_thumb_s" + a.pieceRank + "_" + ("SKILL" == a.pieceType ? 1 : 2)).toLowerCase() + ".png'";
+```
+
+Scraped after EoS
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
@@ -51,7 +61,6 @@ event/dailytower/EventDailyTowerTop.js:              e = b.doc.createElement("im
 
 ### To be investigated
 ```
-event/dailytower/EventDailyTowerTop.js:      if (d.viewParameterMap.HIDE_PIECE && -1 != d.viewParameterMap.HIDE_PIECE.indexOf(a.rewardCode)) return "<img class='commonItemImg' src='/magica/resource/image_web/event/dailytower/common/" + ("memoria_thumb_s" + a.pieceRank + "_" + ("SKILL" == a.pieceType ? 1 : 2)).toLowerCase() + ".png'>";
 event/accomplish/EventAccomplishTop.js:          a.src = "/magica/resource/image_web/event/accomplish/" + c.eventId + "/reward_list.png";
 event/accomplish/EventAccomplishDeck.js:            f.style.cssText = "background:url('/magica/resource/image_web/common/icon/event/icon_" + l + "_f.png') left top no-repeat; background-size:26px 26px;";
 event/EventWitch/parts/ExchangeMemoria.js:      a.rewardPieceInfo.memoriaImg = "/magica/resource/image_web/event/eventWitch/common/alina_request/memoria_thumb_s4_" + b + ".png";
