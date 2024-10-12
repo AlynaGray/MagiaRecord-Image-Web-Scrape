@@ -43,9 +43,6 @@ I can't figure out the format for `a.charaId` because I haven't found any exampl
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
 ```
-event/tower/EventTowerTop.js:          h = 'url("/magica/resource/image_web/event/tower/' + z + "/tab_" + d + '_on.png") left top no-repeat',
-event/tower/EventTowerTop.js:          z = 'url("/magica/resource/image_web/event/tower/' + z + "/tab_" + a + '_off.png") left top no-repeat';
-event/tower/EventTowerTop.js:              f = b.doc.createElement("img"), f.className = "charaImg", f.src = "/magica/resource/image_web/event/tower/" + g.eventId + "/chara/chara_" + a.charaId + ".png", e.el.querySelector(".firstView").appendChild(f), e.el.querySelector(".questTitle").textContent = a.charaTitle
 event/dailytower/EventDailyTowerTop.js:              e = b.doc.createElement("img"), e.className = "charaImg", e.src = "/magica/resource/image_web/event/dailytower/" + d.eventId + "/chara/chara_" + a.charaId + ".png", f.el.querySelector(".firstView").appendChild(e), f.el.querySelector(".questTitle").textContent = a.charaTitle
 event/dailytower/EventDailyTowerTop.js:      if (d.viewParameterMap.HIDE_PIECE && -1 != d.viewParameterMap.HIDE_PIECE.indexOf(a.rewardCode)) return "<img class='commonItemImg' src='/magica/resource/image_web/event/dailytower/common/" + ("memoria_thumb_s" + a.pieceRank + "_" + ("SKILL" == a.pieceType ? 1 : 2)).toLowerCase() + ".png'>";
 event/accomplish/EventAccomplishTop.js:          a.src = "/magica/resource/image_web/event/accomplish/" + c.eventId + "/reward_list.png";
@@ -66,7 +63,6 @@ view/quest/QuestResultView.js:            e.src = "/magica/resource/image_web/co
 view/quest/QuestResultView.js:              e.src = "/magica/resource/image_web/common/treasure/" + b + "_open.png";
 view/quest/QuestResultView.js:            b.src = "/magica/resource/image_web/common/treasure/event/" + a + "_close.png";
 view/quest/QuestResultView.js:              b.src = "/magica/resource/image_web/common/treasure/event/" + a + "_open.png";
-view/memoria/MemoriaComposeTopUseMaterialView.js:        c.src = "/magica/resource/image_web/memoria/memoria_" + b.pieceId + "_s.png";
 view/item/ItemImgPartsView.js:      this.model.imagePath && (this.model.imagePath = this.model.nativeimgkey ? "resource/image_native/" + this.model.imagePath + ".png" : "/magica/resource/image_web/" + this.model.imagePath + ".png");
 view/gacha/GachaBtnView.js:            -1 !== b.selectablePieceIdList.indexOf(a.pieceId) && (g += "<img src='/magica/resource/image_web/memoria/memoria_" + a.pieceId + "_s.png' width='80'>")
 view/shop/ShopTopPartsView.js:          content: "<img class='detailImg' src='/magica/resource/image_web/page/shop/detail/" + this.model.genericId.toLowerCase() + ".png'>",
