@@ -5,6 +5,7 @@ from pathlib import Path
 import urllib.request
 import os
 import random
+import requests
 
 BASE_URL = "https://android.magi-reco.com/"
 # The game server always returns the same html page with status code 200 is the asset is not found
@@ -25,6 +26,7 @@ HEADERS = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/201001
            "Cache-Control": "no-cache"}
 
 GREEN = "\033[0;32m"
+RED = "\033[0;31m"
 RESET = "\033[0m"
 
 def scrape_all(candidates: callable) -> None:
@@ -33,43 +35,46 @@ def scrape_all(candidates: callable) -> None:
     
     with ThreadPoolExecutor(max_workers=1) as executor:
         for asset in candidates():
+            # Use loop to retry after each connection, so transient network errors don't stop the program
             while True:
                 try:
                     print(f"Scraping: {asset}")
                     executor.submit(scrape(asset))
                     break
                 except Exception as e:
-                    print(e)
+                    print(f"{RED}e{RESET}")
 
 
 def scrape(asset: str) -> None:
     # asset is the portion after the domain, without the leading /
     # e.g. "magica/resource/image_web/memoria/memoria_1003_s.png"
-    req = urllib.request.Request(f"{BASE_URL}{asset}", headers=HEADERS)
-    with urllib.request.urlopen(req, timeout=random.randint(4,10)) as response:
-        if response.status != 200:
-            print(f"Returned status code {response.status}")
-        else:
-            # The game server always returns a html page if the asset is not found
-            content = response.read()
-            if content == NONEXISTENT_ASSET_PAGE:
-                return
-            print(f"{GREEN}Found {asset}!{RESET}")
-            os.makedirs(os.path.dirname(Path(asset)), exist_ok=True)
-            with open(Path(asset), mode="wb") as file:
-                file.write(content)
+    response = requests.get(f"{BASE_URL}{asset}", headers=HEADERS, timeout=random.randint(4,10))
+    if response.status_code != 200:
+        raise Exception(f"returned status code {response.status}")
+    else:
+        # The game server always returns a html page if the asset is not found
+        content = response.content
+        if content == NONEXISTENT_ASSET_PAGE:
+            print("non existent")
+            return
+        print(f"{GREEN}Found {asset}!{RESET}")
+        os.makedirs(os.path.dirname(Path(asset)), exist_ok=True)
+        with open(Path(asset), mode="wb") as file:
+            file.write(content)
 
 def nonexistent_asset_page_correct() -> bool:
-    req = urllib.request.Request(f"{BASE_URL}{NONEXISTENT_ASSET}", headers=HEADERS)
-    with urllib.request.urlopen(req) as response:
-        if response.status != 200:
-            print(f"Returned status code {response.status}")
+    print("verifying nonexistent asset page")
+    response = requests.get(f"{BASE_URL}{NONEXISTENT_ASSET}", headers=HEADERS, timeout=20)
+    if response.status_code != 200:
+        print(f"Returned status code {response.status}")
+        return False
+    else:
+        content = response.content
+        if NONEXISTENT_ASSET_PAGE != content:
+            print(f"Error: {NONEXISTENT_ASSET_PAGE_FILENAME} not correct page")
+            print(f"Expected response:\n{NONEXISTENT_ASSET_PAGE}")
+            print(f"Actual response:\n{content}")
             return False
         else:
-            content = response.read()
-            if NONEXISTENT_ASSET_PAGE != content:
-                print(f"Error: {NONEXISTENT_ASSET_PAGE_FILENAME} not correct page")
-                print(f"Actual response: \"{NONEXISTENT_ASSET_PAGE}\"")
-                return False
-            else:
-                return True
+            print("nonexistent asset page correct")
+            return True
