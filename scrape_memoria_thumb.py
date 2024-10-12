@@ -3,7 +3,7 @@
 from typing import Generator
 import common
 
-def memoria_candidates() -> Generator[str, None, None]:
+def candidates() -> Generator[str, None, None]:
     p1 = "magica/resource/image_web/event/dailytower/common/memoria_thumb_s"
     p3 = "_"
     p5 = ".png"
@@ -14,7 +14,7 @@ def memoria_candidates() -> Generator[str, None, None]:
             yield f"{p1}{p2}{p3}{p4}{p5}"
 
 def main():
-    common.scrape_all(memoria_candidates)
+    common.scrape_all(candidates)
 
 if __name__ == "__main__":
     main()
