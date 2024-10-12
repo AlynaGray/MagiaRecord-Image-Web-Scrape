@@ -42,8 +42,15 @@ I can't figure out the format for `a.charaId` because I haven't found any exampl
 ## Remaining lines:
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
+### Unknown formats:
+Can't find examples of these assets in existing archives.
+
 ```
 event/dailytower/EventDailyTowerTop.js:              e = b.doc.createElement("img"), e.className = "charaImg", e.src = "/magica/resource/image_web/event/dailytower/" + d.eventId + "/chara/chara_" + a.charaId + ".png", f.el.querySelector(".firstView").appendChild(e), f.el.querySelector(".questTitle").textContent = a.charaTitle
+```
+
+### To be investigated
+```
 event/dailytower/EventDailyTowerTop.js:      if (d.viewParameterMap.HIDE_PIECE && -1 != d.viewParameterMap.HIDE_PIECE.indexOf(a.rewardCode)) return "<img class='commonItemImg' src='/magica/resource/image_web/event/dailytower/common/" + ("memoria_thumb_s" + a.pieceRank + "_" + ("SKILL" == a.pieceType ? 1 : 2)).toLowerCase() + ".png'>";
 event/accomplish/EventAccomplishTop.js:          a.src = "/magica/resource/image_web/event/accomplish/" + c.eventId + "/reward_list.png";
 event/accomplish/EventAccomplishDeck.js:            f.style.cssText = "background:url('/magica/resource/image_web/common/icon/event/icon_" + l + "_f.png') left top no-repeat; background-size:26px 26px;";
