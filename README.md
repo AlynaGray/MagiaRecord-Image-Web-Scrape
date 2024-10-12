@@ -38,3 +38,50 @@ f = b.doc.createElement("img"), f.className = "charaImg", f.src = "/magica/resou
 ```
 
 I can't figure out the format for `a.charaId` because I haven't found any examples of this asset in the archives.
+
+## Remaining lines:
+Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
+
+```
+event/tower/EventTowerTop.js:          h = 'url("/magica/resource/image_web/event/tower/' + z + "/tab_" + d + '_on.png") left top no-repeat',
+event/tower/EventTowerTop.js:          z = 'url("/magica/resource/image_web/event/tower/' + z + "/tab_" + a + '_off.png") left top no-repeat';
+event/tower/EventTowerTop.js:              f = b.doc.createElement("img"), f.className = "charaImg", f.src = "/magica/resource/image_web/event/tower/" + g.eventId + "/chara/chara_" + a.charaId + ".png", e.el.querySelector(".firstView").appendChild(f), e.el.querySelector(".questTitle").textContent = a.charaTitle
+event/dailytower/EventDailyTowerTop.js:              e = b.doc.createElement("img"), e.className = "charaImg", e.src = "/magica/resource/image_web/event/dailytower/" + d.eventId + "/chara/chara_" + a.charaId + ".png", f.el.querySelector(".firstView").appendChild(e), f.el.querySelector(".questTitle").textContent = a.charaTitle
+event/dailytower/EventDailyTowerTop.js:      if (d.viewParameterMap.HIDE_PIECE && -1 != d.viewParameterMap.HIDE_PIECE.indexOf(a.rewardCode)) return "<img class='commonItemImg' src='/magica/resource/image_web/event/dailytower/common/" + ("memoria_thumb_s" + a.pieceRank + "_" + ("SKILL" == a.pieceType ? 1 : 2)).toLowerCase() + ".png'>";
+event/accomplish/EventAccomplishTop.js:          a.src = "/magica/resource/image_web/event/accomplish/" + c.eventId + "/reward_list.png";
+event/accomplish/EventAccomplishDeck.js:            f.style.cssText = "background:url('/magica/resource/image_web/common/icon/event/icon_" + l + "_f.png') left top no-repeat; background-size:26px 26px;";
+event/EventWitch/parts/ExchangeMemoria.js:      a.rewardPieceInfo.memoriaImg = "/magica/resource/image_web/event/eventWitch/common/alina_request/memoria_thumb_s4_" + b + ".png";
+event/EventWitch/parts/ExchangeMemoria.js:      a.rewardPieceInfo.isExchanged && (a.rewardPieceInfo.memoriaImg = "/magica/resource/image_web/memoria/memoria_" + a.rewardPieceInfo.pieceId + "_s.png", a.ExchangedImgClass = "exchanged", a.ExchangeBtnClass = "noChange");
+formation/DeckFormation.js:            l.style.cssText = "background:url('/magica/resource/image_web/common/icon/event/icon_" + g + "_f.png') left top no-repeat; background-size:26px 26px;";
+regularEvent/groupBattle/RegularEventGroupBattleSelectUnion.js:        content: "<div id='unionImg'><img src='/magica/resource/image_web/regularEvent/groupBattle/union_logo_0" + c.charaUnionList[this.unionIndex].unionId + ".png'/></div>",
+quest/EventQuest.js:              c.specialQuestObj.useItemImagePath = "/magica/resource/image_web/item/" + (-1 < f.indexOf("EVENT_") ? "event/" : "main/") + f.toLowerCase() + ".png";
+quest/QuestUtil.js:            b = 'url("/magica/resource/image_web/event/' + x[d.eventType] + "/" + d.eventId + '/tab_limited_quest_s.png")'
+quest/puellaHistoria/lastBattle/QuestResultMainBoss.js:          10 > g && (a.doc.getElementById("count").getElementsByClassName("damageNumImg")[f].dataset.num = g, a.doc.getElementById("count").getElementsByClassName("damageNumImg")[f].src = "/magica/resource/image_web/page/quest/puellaHistoria_lastBattle/result/_number/b_num_" + Number(g) + ".png")
+campaign/quiz/CampaignQuizTop.js:          a.doc.getElementById("firstClearImg").innerHTML = '<img src="/magica/resource/image_web/item/' + e + "/" + l + '.png">';
+campaign/quiz/CampaignQuizTop.js:          a.doc.getElementById("completeClearImg").innerHTML = '<img src="/magica/resource/image_web/item/' + c + "/" + g + '.png">';
+view/mission/MissionTopView.js:        c = "/magica/resource/image_web/page/mission/doppelMission/" + f + "01/banner.png";
+view/mission/MissionTopView.js:        var c = "/magica/resource/image_web/page/mission/panelMission/" + a.panelMissionList[d].id + "/banner.png",
+view/quest/QuestChapterListPartsView.js:        var a = "url(" + ("/magica/resource/image_web/page/quest/main/titleBg/bg_chapter_" + ("HARD" == b.mainQuestMode ? "challenge_" + this.model.chapterId : this.model.chapterId) + ".png") + ") left center no-repeat";
+view/quest/QuestResultView.js:            e.src = "/magica/resource/image_web/common/treasure/" + b + "_close.png";
+view/quest/QuestResultView.js:              e.src = "/magica/resource/image_web/common/treasure/" + b + "_open.png";
+view/quest/QuestResultView.js:            b.src = "/magica/resource/image_web/common/treasure/event/" + a + "_close.png";
+view/quest/QuestResultView.js:              b.src = "/magica/resource/image_web/common/treasure/event/" + a + "_open.png";
+view/memoria/MemoriaComposeTopUseMaterialView.js:        c.src = "/magica/resource/image_web/memoria/memoria_" + b.pieceId + "_s.png";
+view/item/ItemImgPartsView.js:      this.model.imagePath && (this.model.imagePath = this.model.nativeimgkey ? "resource/image_native/" + this.model.imagePath + ".png" : "/magica/resource/image_web/" + this.model.imagePath + ".png");
+view/gacha/GachaBtnView.js:            -1 !== b.selectablePieceIdList.indexOf(a.pieceId) && (g += "<img src='/magica/resource/image_web/memoria/memoria_" + a.pieceId + "_s.png' width='80'>")
+view/shop/ShopTopPartsView.js:          content: "<img class='detailImg' src='/magica/resource/image_web/page/shop/detail/" + this.model.genericId.toLowerCase() + ".png'>",
+view/user/GlobalMenuView.js:          l.src = resDir + "/magica/resource/image_web/common/number/" + d[e] + ".png";
+view/user/GlobalMenuView.js:            a = "/magica/resource/image_web/page/quest/puellaHistoria_lastBattle/event/" + this.model.toJSON().eventId + "/event_pop.png";
+view/user/GlobalMenuView.js:            a = "/magica/resource/image_web/event/" + x[this.model.get("eventType")] + "/" + this.model.toJSON().eventId + "/event_pop.png"
+view/user/GlobalMenuView.js:        else this.model.get("regularEventType") ? (this.eventType = this.model.get("regularEventType"), a = "/magica/resource/image_web/common/global/event_pop.png", "ARENARANKMATCH" == this.eventType && (a = "/magica/resource/image_web/event/arenaRankMatch/common/event_pop.png")) : a = "/magica/resource/image_web/regularEvent/groupBattle/common2/event_pop.png";
+patrol/PatrolResult.js:            f.src = "/magica/resource/image_web/common/treasure/" + c + "_close.png";
+patrol/PatrolResult.js:              d.src = "/magica/resource/image_web/common/treasure/" + c + "_open.png";
+patrol/PatrolResult.js:            c.src = "/magica/resource/image_web/common/treasure/event/" + a + "_close.png";
+patrol/PatrolResult.js:              c.src = "/magica/resource/image_web/common/treasure/event/" + a + "_open.png";
+patrol/PatrolLumpResult.js:            c.src = "/magica/resource/image_web/common/treasure/" + b + "_close.png";
+patrol/PatrolLumpResult.js:              d.src = "/magica/resource/image_web/common/treasure/" + b + "_open.png";
+patrol/PatrolLumpResult.js:            b.src = "/magica/resource/image_web/common/treasure/event/" + a + "_close.png";
+patrol/PatrolLumpResult.js:              b.src = "/magica/resource/image_web/common/treasure/event/" + a + "_open.png";
+_common/backboneCommon.js:          d.bgImgPath = "url(/magica/resource/image_web/campaign/drop_up/" + d.campaignId + "/global_icon.png) left top no-repeat";
+_common/backboneCommon.js:    return "/magica/resource/image_web/common/icon/" + (c ? b + ".png" : b + "_f.png")
+```
