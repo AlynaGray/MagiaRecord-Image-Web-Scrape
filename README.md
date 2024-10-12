@@ -4,7 +4,7 @@ This is a semi-manual scrape of Magia Record's `magica/resource/image_web` direc
 
 Although EoS has already occurred, the asset servers are still online. I guess the servers will stay up while the archive app is sitll available to download, which is until October 14, 2024.
 
-Entries are marked whether they're scrapped before EoS just in case the assets in the servers changed after that date.
+Only `scrape_memora.py` and `scrape_tower_buttons.py` were run before EoS. The servers remained up after, but I'm noting this just in case the assets changed after EoS.
 
 ## scrape_memora.py
 
@@ -14,8 +14,6 @@ Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9
 "/magica/resource/image_web/memoria/memoria_" + b.pieceId + "_s.png"
 ```
 
-Scraped before EoS
-
 ## scrape_tower_buttons.py
 
 Based on [these lines](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/event/tower/EventTowerTop.js#L160)
@@ -24,8 +22,6 @@ Based on [these lines](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ed
 "/magica/resource/image_web/event/tower/' + z + "/tab_" + d + '_on.png"
 "/magica/resource/image_web/event/tower/' + z + "/tab_" + a + '_off.png"
 ```
-
-Scraped before EoS
 
 ## scrape_tower_chara.py
 
@@ -47,8 +43,6 @@ Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9
 "/magica/resource/image_web/event/dailytower/common/" + ("memoria_thumb_s" + a.pieceRank + "_" + ("SKILL" == a.pieceType ? 1 : 2)).toLowerCase() + ".png'";
 ```
 
-Scraped after EoS
-
 ## scrape_reward_list.py
 
 Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/event/accomplish/EventAccomplishTop.js#L99)
@@ -57,8 +51,6 @@ Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9
 "/magica/resource/image_web/event/accomplish/" + c.eventId + "/reward_list.png"
 ```
 
-Scraped after EoS
-
 ## scrape_alina_memoria_thumb.py
 
 Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/event/EventWitch/parts/ExchangeMemoria.js#L45)
@@ -66,8 +58,6 @@ Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9
 ```
 "/magica/resource/image_web/event/eventWitch/common/alina_request/memoria_thumb_s4_" + b + ".png"
 ```
-
-Scraped after EoS
 
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
