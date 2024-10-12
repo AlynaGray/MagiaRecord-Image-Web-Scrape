@@ -21,9 +21,7 @@ HEADERS = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/201001
            "DNT": "1",
            "Connection": "keep-alive",
            "Upgrade-Insecure-Requests": "1",
-           "Priority": "u=0, i",
-           "Pragma": "no-cache",
-           "Cache-Control": "no-cache"}
+           "Priority": "u=0, i"}
 
 GREEN = "\033[0;32m"
 RED = "\033[0;31m"
