@@ -29,7 +29,7 @@ Scraped before EoS
 
 ## scrape_tower_chara.py
 
-**Does not work**
+:warning:**Does not work**
 
 Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/event/tower/EventTowerTop.js#L266)
 
