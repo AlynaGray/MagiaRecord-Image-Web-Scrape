@@ -31,29 +31,28 @@ def scrape_all(candidates: callable) -> None:
     if not nonexistent_asset_page_correct():
         exit(1)
     
-    with ThreadPoolExecutor(max_workers=1) as executor:
+    with requests.Session() as session, ThreadPoolExecutor(max_workers=1) as executor:
         for asset in candidates():
             # Use loop to retry after each connection, so transient network errors don't stop the program
             while True:
                 try:
                     print(f"Scraping: {asset}")
-                    executor.submit(scrape(asset))
+                    executor.submit(scrape(session, asset))
                     break
                 except Exception as e:
-                    print(f"{RED}e{RESET}")
+                    print(f"{RED}{e}{RESET}")
 
 
-def scrape(asset: str) -> None:
+def scrape(session: requests.Session, asset: str) -> None:
     # asset is the portion after the domain, without the leading /
     # e.g. "magica/resource/image_web/memoria/memoria_1003_s.png"
-    response = requests.get(f"{BASE_URL}{asset}", headers=HEADERS, timeout=random.randint(4,10))
+    response = session.get(f"{BASE_URL}{asset}", headers=HEADERS, timeout=random.randint(4,10))
     if response.status_code != 200:
         raise Exception(f"returned status code {response.status}")
     else:
         # The game server always returns a html page if the asset is not found
         content = response.content
         if content == NONEXISTENT_ASSET_PAGE:
-            print("non existent")
             return
         print(f"{GREEN}Found {asset}!{RESET}")
         os.makedirs(os.path.dirname(Path(asset)), exist_ok=True)
