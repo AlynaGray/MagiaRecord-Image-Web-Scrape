@@ -78,7 +78,6 @@ event/accomplish/EventAccomplishDeck.js:            f.style.cssText = "backgroun
 
 ### To be investigated
 ```
-event/EventWitch/parts/ExchangeMemoria.js:      a.rewardPieceInfo.isExchanged && (a.rewardPieceInfo.memoriaImg = "/magica/resource/image_web/memoria/memoria_" + a.rewardPieceInfo.pieceId + "_s.png", a.ExchangedImgClass = "exchanged", a.ExchangeBtnClass = "noChange");
 formation/DeckFormation.js:            l.style.cssText = "background:url('/magica/resource/image_web/common/icon/event/icon_" + g + "_f.png') left top no-repeat; background-size:26px 26px;";
 regularEvent/groupBattle/RegularEventGroupBattleSelectUnion.js:        content: "<div id='unionImg'><img src='/magica/resource/image_web/regularEvent/groupBattle/union_logo_0" + c.charaUnionList[this.unionIndex].unionId + ".png'/></div>",
 quest/EventQuest.js:              c.specialQuestObj.useItemImagePath = "/magica/resource/image_web/item/" + (-1 < f.indexOf("EVENT_") ? "event/" : "main/") + f.toLowerCase() + ".png";
