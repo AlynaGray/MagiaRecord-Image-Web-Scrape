@@ -49,6 +49,16 @@ Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9
 
 Scraped after EoS
 
+## scrape_reward_list.py
+
+Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/event/accomplish/EventAccomplishTop.js#L99)
+
+```js
+"/magica/resource/image_web/event/accomplish/" + c.eventId + "/reward_list.png"
+```
+
+Scraped after EoS
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
@@ -61,7 +71,6 @@ event/dailytower/EventDailyTowerTop.js:              e = b.doc.createElement("im
 
 ### To be investigated
 ```
-event/accomplish/EventAccomplishTop.js:          a.src = "/magica/resource/image_web/event/accomplish/" + c.eventId + "/reward_list.png";
 event/accomplish/EventAccomplishDeck.js:            f.style.cssText = "background:url('/magica/resource/image_web/common/icon/event/icon_" + l + "_f.png') left top no-repeat; background-size:26px 26px;";
 event/EventWitch/parts/ExchangeMemoria.js:      a.rewardPieceInfo.memoriaImg = "/magica/resource/image_web/event/eventWitch/common/alina_request/memoria_thumb_s4_" + b + ".png";
 event/EventWitch/parts/ExchangeMemoria.js:      a.rewardPieceInfo.isExchanged && (a.rewardPieceInfo.memoriaImg = "/magica/resource/image_web/memoria/memoria_" + a.rewardPieceInfo.pieceId + "_s.png", a.ExchangedImgClass = "exchanged", a.ExchangeBtnClass = "noChange");
