@@ -39,7 +39,7 @@ Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9
 
 I can't figure out the format for `a.charaId` because I haven't found any examples of this asset in the archives.
 
-## scrape_memoria_thumbs.py
+## scrape_memoria_thumb.py
 
 Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/event/dailytower/EventDailyTowerTop.js#L675C1-L675C298)
 
