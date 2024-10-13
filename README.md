@@ -130,7 +130,7 @@ regularEvent/groupBattle/RegularEventGroupBattleSelectUnion.js:        content: 
 
 Put off due to difficulty.
 
-Notes: They're all related to generating event related identifiers.
+Related to generating event related identifiers:
 ```
 event/accomplish/EventAccomplishDeck.js:            f.style.cssText = "background:url('/magica/resource/image_web/common/icon/event/icon_" + l + "_f.png') left top no-repeat; background-size:26px 26px;";
 formation/DeckFormation.js:            l.style.cssText = "background:url('/magica/resource/image_web/common/icon/event/icon_" + g + "_f.png') left top no-repeat; background-size:26px 26px;";
@@ -141,9 +141,13 @@ view/quest/QuestResultView.js:            b.src = "/magica/resource/image_web/co
 view/quest/QuestResultView.js:              b.src = "/magica/resource/image_web/common/treasure/event/" + a + "_open.png";
 ```
 
-### To be investigated
+Very generic:
 ```
 view/item/ItemImgPartsView.js:      this.model.imagePath && (this.model.imagePath = this.model.nativeimgkey ? "resource/image_native/" + this.model.imagePath + ".png" : "/magica/resource/image_web/" + this.model.imagePath + ".png");
+```
+
+### To be investigated
+```
 view/gacha/GachaBtnView.js:            -1 !== b.selectablePieceIdList.indexOf(a.pieceId) && (g += "<img src='/magica/resource/image_web/memoria/memoria_" + a.pieceId + "_s.png' width='80'>")
 view/shop/ShopTopPartsView.js:          content: "<img class='detailImg' src='/magica/resource/image_web/page/shop/detail/" + this.model.genericId.toLowerCase() + ".png'>",
 view/user/GlobalMenuView.js:          l.src = resDir + "/magica/resource/image_web/common/number/" + d[e] + ".png";
