@@ -145,6 +145,14 @@ Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9
 
 Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/view/user/GlobalMenuView.js#L936), [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/view/user/GlobalMenuView.js#L944), [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/template/top/__TopPage.html#L6C91-L6C97), [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/css/quest/PuellaHistoriaTop.css#L94), [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/css/_common/common.css#L9224), and [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/css/_common/common.css#L9321)
 
+## scrape_drop_up_campaign_icon.py
+
+Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/_common/backboneCommon.js#L441)
+
+```js
+"/magica/resource/image_web/campaign/drop_up/" + d.campaignId + "/global_icon.png"
+```
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
@@ -189,6 +197,5 @@ patrol/PatrolResult.js:            c.src = "/magica/resource/image_web/common/tr
 patrol/PatrolResult.js:              c.src = "/magica/resource/image_web/common/treasure/event/" + a + "_open.png";
 patrol/PatrolLumpResult.js:            b.src = "/magica/resource/image_web/common/treasure/event/" + a + "_close.png";
 patrol/PatrolLumpResult.js:              b.src = "/magica/resource/image_web/common/treasure/event/" + a + "_open.png";
-_common/backboneCommon.js:          d.bgImgPath = "url(/magica/resource/image_web/campaign/drop_up/" + d.campaignId + "/global_icon.png) left top no-repeat";
 _common/backboneCommon.js:    return "/magica/resource/image_web/common/icon/" + (c ? b + ".png" : b + "_f.png")
 ```
