@@ -186,6 +186,10 @@ Search through text files in `bella_donna`, `puella-historia`, and `MITaMa` for 
 
 Based on inspection of `MITaMa`. I didn't find any reference to it in the code.
 
+## scrape_banner_announce.py
+
+Based on inspection of `MITaMa` and `puella-historia`. I only found full path references to these files, and not generic templates, in the code.
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
