@@ -174,6 +174,10 @@ Based on [this file](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9
 
 Based on existing archive patterns and game knowledge. Only scrapes `navi_01.png`. Plan to use these locations to scrape the rest.
 
+## scrape_all_specific_paths.py
+
+Search through text files in `bella_donna`, `puella-historia`, and `MITaMa` for full paths and download them. Interestingly, there were some full paths that weren't in the server e.g. `/magica/resource/image_web/regularEvent/senmetsu/common/bg_map_enemy.png` and `magica/resource/image_web/item/main/cure_ap_10.png`. I guess they're unimplemented features or things that were changed or removed during development.
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
