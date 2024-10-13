@@ -190,6 +190,10 @@ Based on inspection of `MITaMa`. I didn't find any reference to it in the code.
 
 Based on inspection of `MITaMa` and `puella-historia`. I only found full path references to these files, and not generic templates, in the code.
 
+## scrape_announce_2.py
+
+Based on inspection of `MITaMa`. Searches for patterns like `magica/resource/image_web/announce/announce_230117.png`.
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
