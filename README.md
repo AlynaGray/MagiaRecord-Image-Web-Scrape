@@ -170,6 +170,10 @@ Based on [this file](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9
 "/magica/resource/image_web/campaign/story/<%='<%= model.campaignId %\>'%>/story_collection_title.png"
 ```
 
+## scrape_event_navi_01.py
+
+Based on existing archive patterns and game knowledge. Only scrapes `navi_01.png`. Plan to use these locations to scrape the rest.
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
