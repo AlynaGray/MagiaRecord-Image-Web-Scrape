@@ -6,6 +6,8 @@ Although EoS has already occurred, the asset servers are still online. I guess t
 
 Only `scrape_memora.py` and `scrape_tower_buttons.py` were run before EoS. The servers remained up after, but I'm noting this just in case the assets changed after EoS.
 
+Note: Some of the excerpts have their single and double quotes modified to match. Not sure why they don't match in the original.
+
 ## scrape_memora.py
 
 Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/view/memoria/MemoriaComposeTopUseMaterialView.js#L72)
@@ -59,6 +61,16 @@ Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9
 "/magica/resource/image_web/event/eventWitch/common/alina_request/memoria_thumb_s4_" + b + ".png"
 ```
 
+## scrape_event_quest_tab.py
+
+Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/quest/QuestUtil.js#L277)
+
+```js
+"/magica/resource/image_web/event/" + x[d.eventType] + "/" + d.eventId + "/tab_limited_quest_s.png"
+```
+
+Note: Some of the training events don't have a tab image on the server at the time of scraping.
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
@@ -81,7 +93,6 @@ quest/EventQuest.js:              c.specialQuestObj.useItemImagePath = "/magica/
 
 ### To be investigated
 ```
-quest/QuestUtil.js:            b = 'url("/magica/resource/image_web/event/' + x[d.eventType] + "/" + d.eventId + '/tab_limited_quest_s.png")'
 quest/puellaHistoria/lastBattle/QuestResultMainBoss.js:          10 > g && (a.doc.getElementById("count").getElementsByClassName("damageNumImg")[f].dataset.num = g, a.doc.getElementById("count").getElementsByClassName("damageNumImg")[f].src = "/magica/resource/image_web/page/quest/puellaHistoria_lastBattle/result/_number/b_num_" + Number(g) + ".png")
 campaign/quiz/CampaignQuizTop.js:          a.doc.getElementById("firstClearImg").innerHTML = '<img src="/magica/resource/image_web/item/' + e + "/" + l + '.png">';
 campaign/quiz/CampaignQuizTop.js:          a.doc.getElementById("completeClearImg").innerHTML = '<img src="/magica/resource/image_web/item/' + c + "/" + g + '.png">';
