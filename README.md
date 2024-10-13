@@ -182,6 +182,10 @@ Based on search for `navi_0` and `navi_1` in `bella_donna` and existing archives
 
 Search through text files in `bella_donna`, `puella-historia`, and `MITaMa` for full paths and download them. Interestingly, there were some full paths that weren't in the server e.g. `/magica/resource/image_web/regularEvent/senmetsu/common/bg_map_enemy.png` and `magica/resource/image_web/item/main/cure_ap_10.png`. I guess they're unimplemented features or things that were changed or removed during development.
 
+## scrape_announce_common.py
+
+Based on inspection of `MITaMa`. I didn't find any reference to it in the code.
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
