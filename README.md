@@ -105,7 +105,7 @@ Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9
 
 ## scrape_treasure.py
 
-Based on [these lines](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/view/quest/QuestResultView.js#L423), [these lines](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/patrol/PatrolLumpResult.js#L132C69-L132C70), and [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/template/event/accomplish/EventAccomplishTop.html#L263)
+Based on [these lines](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/view/quest/QuestResultView.js#L423), [these lines](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/patrol/PatrolResult.js#L118), and [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/template/event/accomplish/EventAccomplishTop.html#L263)
 
 ```js
 "/magica/resource/image_web/common/treasure/" + b + "_close.png"
@@ -191,8 +191,6 @@ view/shop/ShopTopPartsView.js:          content: "<img class='detailImg' src='/m
 
 ### To be investigated
 ```
-patrol/PatrolResult.js:            f.src = "/magica/resource/image_web/common/treasure/" + c + "_close.png";
-patrol/PatrolResult.js:              d.src = "/magica/resource/image_web/common/treasure/" + c + "_open.png";
 patrol/PatrolResult.js:            c.src = "/magica/resource/image_web/common/treasure/event/" + a + "_close.png";
 patrol/PatrolResult.js:              c.src = "/magica/resource/image_web/common/treasure/event/" + a + "_open.png";
 patrol/PatrolLumpResult.js:            b.src = "/magica/resource/image_web/common/treasure/event/" + a + "_close.png";
