@@ -157,6 +157,19 @@ Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9
 
 Pattern identified through inspection of existing archives.
 
+## scrape_story_collection_title.py
+
+Based on [this file](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/template/collection/StoryCollection.html)
+
+```html
+"/magica/resource/image_web/page/quest/puellaHistoria_lastBattle/event/1198/story_collection_title.png"
+"/magica/resource/image_web/event/<%='<%= model.questType.toLowerCase() %\>'%>/<%='<%= model.eventId %\>'%>/story_collection_title.png"
+"/magica/resource/image_web/<%='<%= eventKind %\>'%>/<%='<%= eventDir %\>'%>/<%='<%= eventId %\>'%>/story_collection_title.png"
+"/magica/resource/image_web/event/<%='<%= model.eventType.toLowerCase() %\>'%>/<%='<%= model.eventId %\>'%>/story_collection_title.png"
+"/magica/resource/image_web/event/eventWitch/<%='<%= model.eventId %\>'%>/story_collection_title.png"
+"/magica/resource/image_web/campaign/story/<%='<%= model.campaignId %\>'%>/story_collection_title.png"
+```
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
