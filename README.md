@@ -10,7 +10,7 @@ Note: Some of the excerpts have their single and double quotes modified to match
 
 ## scrape_memora.py
 
-Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/view/memoria/MemoriaComposeTopUseMaterialView.js#L72) and [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/event/EventWitch/parts/ExchangeMemoria.js#L47)
+Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/view/memoria/MemoriaComposeTopUseMaterialView.js#L72), [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/event/EventWitch/parts/ExchangeMemoria.js#L47), and [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/view/gacha/GachaBtnView.js#L90)
 
 ```js
 "/magica/resource/image_web/memoria/memoria_" + b.pieceId + "_s.png"
@@ -148,7 +148,6 @@ view/item/ItemImgPartsView.js:      this.model.imagePath && (this.model.imagePat
 
 ### To be investigated
 ```
-view/gacha/GachaBtnView.js:            -1 !== b.selectablePieceIdList.indexOf(a.pieceId) && (g += "<img src='/magica/resource/image_web/memoria/memoria_" + a.pieceId + "_s.png' width='80'>")
 view/shop/ShopTopPartsView.js:          content: "<img class='detailImg' src='/magica/resource/image_web/page/shop/detail/" + this.model.genericId.toLowerCase() + ".png'>",
 view/user/GlobalMenuView.js:          l.src = resDir + "/magica/resource/image_web/common/number/" + d[e] + ".png";
 view/user/GlobalMenuView.js:            a = "/magica/resource/image_web/page/quest/puellaHistoria_lastBattle/event/" + this.model.toJSON().eventId + "/event_pop.png";
