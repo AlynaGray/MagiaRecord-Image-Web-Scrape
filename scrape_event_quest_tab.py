@@ -7,7 +7,7 @@ def candidates() -> Generator[str, None, None]:
     p1 = "magica/resource/image_web/event/"
     p3 = "/"
     p5 ="/tab_limited_quest_s.png"
-    for i in ("accomplish", "aprilfool2018", "arenaMission", "arenaRankMatch", "arenaranking", "branch", "dailytower", "dungeon", "eventWalpurgis", "eventWitch", "raid", "singleraid", "tower", "training"):
+    for i in ("accomplish", "aprilfool2018", "arenaMission", "arenaRankMatch", "arenaranking", "branch", "dailytower", "dungeon", "eventWalpurgis", "eventWitch", "raid", "singleraid", "storyraid", "tower", "training"):
         p2 = i
         for j in range(1000, 1401):
             p4 = str(j).zfill(4)
