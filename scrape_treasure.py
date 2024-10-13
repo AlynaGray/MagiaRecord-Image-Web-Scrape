@@ -7,7 +7,7 @@ def candidates() -> Generator[str, None, None]:
     p1 = "magica/resource/image_web/common/treasure/"
     for i in ("bronze", "silver", "gold"):
         p2 = i
-        for j in ("_close.png", "_open.png"):
+        for j in (".png", "_close.png", "_open.png"):
             p3 = j
             yield f"{p1}{p2}{p3}"
 
