@@ -128,19 +128,21 @@ regularEvent/groupBattle/RegularEventGroupBattleSelectUnion.js:        content: 
 
 ### Deferred
 
-Put off due to difficulty
+Put off due to difficulty.
+
+Notes: They're all related to generating event related identifiers.
 ```
 event/accomplish/EventAccomplishDeck.js:            f.style.cssText = "background:url('/magica/resource/image_web/common/icon/event/icon_" + l + "_f.png') left top no-repeat; background-size:26px 26px;";
 formation/DeckFormation.js:            l.style.cssText = "background:url('/magica/resource/image_web/common/icon/event/icon_" + g + "_f.png') left top no-repeat; background-size:26px 26px;";
 quest/EventQuest.js:              c.specialQuestObj.useItemImagePath = "/magica/resource/image_web/item/" + (-1 < f.indexOf("EVENT_") ? "event/" : "main/") + f.toLowerCase() + ".png";
 campaign/quiz/CampaignQuizTop.js:          a.doc.getElementById("firstClearImg").innerHTML = '<img src="/magica/resource/image_web/item/' + e + "/" + l + '.png">';
 campaign/quiz/CampaignQuizTop.js:          a.doc.getElementById("completeClearImg").innerHTML = '<img src="/magica/resource/image_web/item/' + c + "/" + g + '.png">';
+view/quest/QuestResultView.js:            b.src = "/magica/resource/image_web/common/treasure/event/" + a + "_close.png";
+view/quest/QuestResultView.js:              b.src = "/magica/resource/image_web/common/treasure/event/" + a + "_open.png";
 ```
 
 ### To be investigated
 ```
-view/quest/QuestResultView.js:            b.src = "/magica/resource/image_web/common/treasure/event/" + a + "_close.png";
-view/quest/QuestResultView.js:              b.src = "/magica/resource/image_web/common/treasure/event/" + a + "_open.png";
 view/item/ItemImgPartsView.js:      this.model.imagePath && (this.model.imagePath = this.model.nativeimgkey ? "resource/image_native/" + this.model.imagePath + ".png" : "/magica/resource/image_web/" + this.model.imagePath + ".png");
 view/gacha/GachaBtnView.js:            -1 !== b.selectablePieceIdList.indexOf(a.pieceId) && (g += "<img src='/magica/resource/image_web/memoria/memoria_" + a.pieceId + "_s.png' width='80'>")
 view/shop/ShopTopPartsView.js:          content: "<img class='detailImg' src='/magica/resource/image_web/page/shop/detail/" + this.model.genericId.toLowerCase() + ".png'>",
