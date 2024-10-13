@@ -62,7 +62,7 @@ def scrape(session: requests.Session, asset: str) -> None:
             file.write(content)
 
 def nonexistent_asset_page_correct() -> bool:
-    print("verifying nonexistent asset page")
+    print("Verifying nonexistent asset page")
     response = requests.get(f"{BASE_URL}{NONEXISTENT_ASSET}", headers=HEADERS, timeout=20)
     if response.status_code != 200:
         print(f"Returned status code {response.status}")
@@ -75,5 +75,5 @@ def nonexistent_asset_page_correct() -> bool:
             print(f"Actual response:\n{content}")
             return False
         else:
-            print("nonexistent asset page correct")
+            print("Nonexistent asset page correct")
             return True
