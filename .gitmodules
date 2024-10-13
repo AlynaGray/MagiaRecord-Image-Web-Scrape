@@ -1,0 +1,9 @@
+[submodule "bella_donna"]
+	path = bella_donna
+	url = git@github.com:LiviaMedeiros/bella_donna.git
+[submodule "puella-historia"]
+	path = puella-historia
+	url = git@gitlab.com:puella-care/puella-historia.git
+[submodule "MITaMa"]
+	path = MITaMa
+	url = git@gitlab.com:puella-care/MITaMa.git
