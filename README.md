@@ -71,6 +71,14 @@ Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9
 
 Note: Some of the training events don't have a tab image on the server at the time of scraping.
 
+## scrape_puella_historia_damage_num.py
+
+Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/quest/puellaHistoria/lastBattle/QuestResultMainBoss.js#L99C1-L99C298)
+
+```js
+"/magica/resource/image_web/page/quest/puellaHistoria_lastBattle/result/_number/b_num_" + Number(g) + ".png"
+```
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
@@ -93,7 +101,6 @@ quest/EventQuest.js:              c.specialQuestObj.useItemImagePath = "/magica/
 
 ### To be investigated
 ```
-quest/puellaHistoria/lastBattle/QuestResultMainBoss.js:          10 > g && (a.doc.getElementById("count").getElementsByClassName("damageNumImg")[f].dataset.num = g, a.doc.getElementById("count").getElementsByClassName("damageNumImg")[f].src = "/magica/resource/image_web/page/quest/puellaHistoria_lastBattle/result/_number/b_num_" + Number(g) + ".png")
 campaign/quiz/CampaignQuizTop.js:          a.doc.getElementById("firstClearImg").innerHTML = '<img src="/magica/resource/image_web/item/' + e + "/" + l + '.png">';
 campaign/quiz/CampaignQuizTop.js:          a.doc.getElementById("completeClearImg").innerHTML = '<img src="/magica/resource/image_web/item/' + c + "/" + g + '.png">';
 view/mission/MissionTopView.js:        c = "/magica/resource/image_web/page/mission/doppelMission/" + f + "01/banner.png";
