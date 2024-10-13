@@ -153,6 +153,10 @@ Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9
 "/magica/resource/image_web/campaign/drop_up/" + d.campaignId + "/global_icon.png"
 ```
 
+## scrape_kimochi_stone.py
+
+Pattern identified through inspection of existing archives.
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
