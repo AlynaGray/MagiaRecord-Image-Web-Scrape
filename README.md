@@ -103,6 +103,15 @@ Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9
 "/magica/resource/image_web/page/quest/main/titleBg/bg_chapter_" + ("HARD" == b.mainQuestMode ? "challenge_" + this.model.chapterId : this.model.chapterId) + ".png"
 ```
 
+## scrape_treasure.py
+
+Based on [these lines](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/view/quest/QuestResultView.js#L423) and [these lines](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/patrol/PatrolLumpResult.js#L132C69-L132C70)
+
+```js
+"/magica/resource/image_web/common/treasure/" + b + "_close.png"
+"/magica/resource/image_web/common/treasure/" + b + "_open.png"
+```
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
@@ -127,8 +136,6 @@ campaign/quiz/CampaignQuizTop.js:          a.doc.getElementById("completeClearIm
 
 ### To be investigated
 ```
-view/quest/QuestResultView.js:            e.src = "/magica/resource/image_web/common/treasure/" + b + "_close.png";
-view/quest/QuestResultView.js:              e.src = "/magica/resource/image_web/common/treasure/" + b + "_open.png";
 view/quest/QuestResultView.js:            b.src = "/magica/resource/image_web/common/treasure/event/" + a + "_close.png";
 view/quest/QuestResultView.js:              b.src = "/magica/resource/image_web/common/treasure/event/" + a + "_open.png";
 view/item/ItemImgPartsView.js:      this.model.imagePath && (this.model.imagePath = this.model.nativeimgkey ? "resource/image_native/" + this.model.imagePath + ".png" : "/magica/resource/image_web/" + this.model.imagePath + ".png");
@@ -142,8 +149,6 @@ patrol/PatrolResult.js:            f.src = "/magica/resource/image_web/common/tr
 patrol/PatrolResult.js:              d.src = "/magica/resource/image_web/common/treasure/" + c + "_open.png";
 patrol/PatrolResult.js:            c.src = "/magica/resource/image_web/common/treasure/event/" + a + "_close.png";
 patrol/PatrolResult.js:              c.src = "/magica/resource/image_web/common/treasure/event/" + a + "_open.png";
-patrol/PatrolLumpResult.js:            c.src = "/magica/resource/image_web/common/treasure/" + b + "_close.png";
-patrol/PatrolLumpResult.js:              d.src = "/magica/resource/image_web/common/treasure/" + b + "_open.png";
 patrol/PatrolLumpResult.js:            b.src = "/magica/resource/image_web/common/treasure/event/" + a + "_close.png";
 patrol/PatrolLumpResult.js:              b.src = "/magica/resource/image_web/common/treasure/event/" + a + "_open.png";
 _common/backboneCommon.js:          d.bgImgPath = "url(/magica/resource/image_web/campaign/drop_up/" + d.campaignId + "/global_icon.png) left top no-repeat";
