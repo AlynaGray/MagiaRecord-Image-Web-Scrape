@@ -133,6 +133,14 @@ Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9
 "/magica/resource/image_web/page/quest/puellaHistoria_lastBattle/event/" + this.model.toJSON().eventId + "/event_pop.png"
 ```
 
+## scrape_event_pop.py
+
+Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/view/user/GlobalMenuView.js#L942)
+
+```js
+"/magica/resource/image_web/event/" + x[this.model.get("eventType")] + "/" + this.model.toJSON().eventId + "/event_pop.png"
+```
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
@@ -171,7 +179,6 @@ view/shop/ShopTopPartsView.js:          content: "<img class='detailImg' src='/m
 
 ### To be investigated
 ```
-view/user/GlobalMenuView.js:            a = "/magica/resource/image_web/event/" + x[this.model.get("eventType")] + "/" + this.model.toJSON().eventId + "/event_pop.png"
 view/user/GlobalMenuView.js:        else this.model.get("regularEventType") ? (this.eventType = this.model.get("regularEventType"), a = "/magica/resource/image_web/common/global/event_pop.png", "ARENARANKMATCH" == this.eventType && (a = "/magica/resource/image_web/event/arenaRankMatch/common/event_pop.png")) : a = "/magica/resource/image_web/regularEvent/groupBattle/common2/event_pop.png";
 patrol/PatrolResult.js:            f.src = "/magica/resource/image_web/common/treasure/" + c + "_close.png";
 patrol/PatrolResult.js:              d.src = "/magica/resource/image_web/common/treasure/" + c + "_open.png";
