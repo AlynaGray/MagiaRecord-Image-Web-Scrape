@@ -191,9 +191,9 @@ view/item/ItemImgPartsView.js:      this.model.imagePath && (this.model.imagePat
 No clear pattern in identifier:
 ```
 view/shop/ShopTopPartsView.js:          content: "<img class='detailImg' src='/magica/resource/image_web/page/shop/detail/" + this.model.genericId.toLowerCase() + ".png'>",
+_common/backboneCommon.js:    return "/magica/resource/image_web/common/icon/" + (c ? b + ".png" : b + "_f.png")
 ```
 
 ### To be investigated
 ```
-_common/backboneCommon.js:    return "/magica/resource/image_web/common/icon/" + (c ? b + ".png" : b + "_f.png")
 ```
