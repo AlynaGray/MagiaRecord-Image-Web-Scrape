@@ -202,6 +202,18 @@ Scrape files like `magica/resource/image_web/announce/announce_campaign_10381.pn
 
 Scrape files like `magica/resource/image_web/announce/announce_campaign_10381_1.png` with the `_1` suffix.
 
+## scrape_announce_event_bare.py
+
+Scrape files like `magica/resource/image_web/announce/announce_event_11473.png` without suffixes.
+
+## scrape_announce_event_with_a.py
+
+Scrape files like `magica/resource/image_web/announce/announce_event_11454_a.png` with the `_a` suffix.
+
+## scrape_announce_event_with_1.py
+
+Scrape files like `magica/resource/image_web/announce/announce_event_10631_1.png` with the `_1` suffix.
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
