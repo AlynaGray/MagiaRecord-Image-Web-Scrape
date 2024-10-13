@@ -2,7 +2,7 @@
 
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
-import urllib.request
+from typing import Generator
 import os
 import random
 import requests
@@ -26,6 +26,19 @@ HEADERS = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/201001
 GREEN = "\033[0;32m"
 RED = "\033[0;31m"
 RESET = "\033[0m"
+
+
+# Scrape for filename in every directory inside magica recursively.
+# If prerequisite_file is not None, only scrape in directories with prerquisite_file
+def scrape_all_in_dirs(filename: str, prerequisite_file: str | None = None) -> None:
+    scrape_all(lambda: scrape_all_in_dirs_generator(filename, prerequisite_file))
+
+def scrape_all_in_dirs_generator(filename: str, prerequisite_file: str | None = None) -> Generator[str, None, None]:
+    for dirpath, _, files in os.walk("magica"):
+        if prerequisite_file is not None and prerequisite_file not in files:
+            continue
+        yield f"{dirpath}/{filename}"
+
 
 def scrape_all(candidates: callable) -> None:
     if not nonexistent_asset_page_correct():
