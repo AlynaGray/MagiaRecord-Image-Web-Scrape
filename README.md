@@ -10,7 +10,7 @@ Note: Some of the excerpts have their single and double quotes modified to match
 
 ## scrape_memora.py
 
-Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/view/memoria/MemoriaComposeTopUseMaterialView.js#L72)
+Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/view/memoria/MemoriaComposeTopUseMaterialView.js#L72) and [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/event/EventWitch/parts/ExchangeMemoria.js#L47)
 
 ```js
 "/magica/resource/image_web/memoria/memoria_" + b.pieceId + "_s.png"
