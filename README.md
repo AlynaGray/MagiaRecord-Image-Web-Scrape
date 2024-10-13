@@ -79,6 +79,14 @@ Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9
 "/magica/resource/image_web/page/quest/puellaHistoria_lastBattle/result/_number/b_num_" + Number(g) + ".png"
 ```
 
+## scrape_doppel_mission_banner.py
+
+Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/view/mission/MissionTopView.js#L218)
+
+```js
+"/magica/resource/image_web/page/mission/doppelMission/" + f + "01/banner.png"
+```
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
@@ -103,7 +111,6 @@ campaign/quiz/CampaignQuizTop.js:          a.doc.getElementById("completeClearIm
 
 ### To be investigated
 ```
-view/mission/MissionTopView.js:        c = "/magica/resource/image_web/page/mission/doppelMission/" + f + "01/banner.png";
 view/mission/MissionTopView.js:        var c = "/magica/resource/image_web/page/mission/panelMission/" + a.panelMissionList[d].id + "/banner.png",
 view/quest/QuestChapterListPartsView.js:        var a = "url(" + ("/magica/resource/image_web/page/quest/main/titleBg/bg_chapter_" + ("HARD" == b.mainQuestMode ? "challenge_" + this.model.chapterId : this.model.chapterId) + ".png") + ") left center no-repeat";
 view/quest/QuestResultView.js:            e.src = "/magica/resource/image_web/common/treasure/" + b + "_close.png";
