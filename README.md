@@ -146,9 +146,13 @@ Very generic:
 view/item/ItemImgPartsView.js:      this.model.imagePath && (this.model.imagePath = this.model.nativeimgkey ? "resource/image_native/" + this.model.imagePath + ".png" : "/magica/resource/image_web/" + this.model.imagePath + ".png");
 ```
 
-### To be investigated
+No clear pattern in identifier:
 ```
 view/shop/ShopTopPartsView.js:          content: "<img class='detailImg' src='/magica/resource/image_web/page/shop/detail/" + this.model.genericId.toLowerCase() + ".png'>",
+```
+
+### To be investigated
+```
 view/user/GlobalMenuView.js:          l.src = resDir + "/magica/resource/image_web/common/number/" + d[e] + ".png";
 view/user/GlobalMenuView.js:            a = "/magica/resource/image_web/page/quest/puellaHistoria_lastBattle/event/" + this.model.toJSON().eventId + "/event_pop.png";
 view/user/GlobalMenuView.js:            a = "/magica/resource/image_web/event/" + x[this.model.get("eventType")] + "/" + this.model.toJSON().eventId + "/event_pop.png"
