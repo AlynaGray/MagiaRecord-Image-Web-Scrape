@@ -194,6 +194,14 @@ Based on inspection of `MITaMa` and `puella-historia`. I only found full path re
 
 Based on inspection of `MITaMa`. Searches for patterns like `magica/resource/image_web/announce/announce_230117.png`.
 
+## scrape_announce_campaign_bare.py
+
+Scrape files like `magica/resource/image_web/announce/announce_campaign_10381.png` without suffixes.
+
+## scrape_announce_campaign_with_1.py
+
+Scrape files like `magica/resource/image_web/announce/announce_campaign_10381_1.png` with the `_1` suffix.
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
