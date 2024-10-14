@@ -240,6 +240,16 @@ This didn't actually scrape anything and doesn't correspond to everything. I mad
 
 Handles event portion of [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/quest/EventQuest.js#L102)
 
+## scrape_event_treasure.py
+
+Based on [these lines](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/view/quest/QuestResultView.js#L439), [these lines](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/patrol/PatrolResult.js#L134), and [these lines](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/patrol/PatrolLumpResult.js#L148)
+
+```js
+"/magica/resource/image_web/common/treasure/event/" + a + "_close.png"
+"/magica/resource/image_web/common/treasure/event/" + a + "_open.png"
+```
+
+
 **Does not handle stickers or chara assets**
 
 ```js
@@ -266,12 +276,6 @@ Related to generating event related identifiers:
 quest/EventQuest.js:              c.specialQuestObj.useItemImagePath = "/magica/resource/image_web/item/" + (-1 < f.indexOf("EVENT_") ? "event/" : "main/") + f.toLowerCase() + ".png";
 campaign/quiz/CampaignQuizTop.js:          a.doc.getElementById("firstClearImg").innerHTML = '<img src="/magica/resource/image_web/item/' + e + "/" + l + '.png">';
 campaign/quiz/CampaignQuizTop.js:          a.doc.getElementById("completeClearImg").innerHTML = '<img src="/magica/resource/image_web/item/' + c + "/" + g + '.png">';
-view/quest/QuestResultView.js:            b.src = "/magica/resource/image_web/common/treasure/event/" + a + "_close.png";
-view/quest/QuestResultView.js:              b.src = "/magica/resource/image_web/common/treasure/event/" + a + "_open.png";
-patrol/PatrolResult.js:            c.src = "/magica/resource/image_web/common/treasure/event/" + a + "_close.png";
-patrol/PatrolResult.js:              c.src = "/magica/resource/image_web/common/treasure/event/" + a + "_open.png";
-patrol/PatrolLumpResult.js:            b.src = "/magica/resource/image_web/common/treasure/event/" + a + "_close.png";
-patrol/PatrolLumpResult.js:              b.src = "/magica/resource/image_web/common/treasure/event/" + a + "_open.png";
 ```
 
 Very generic:
