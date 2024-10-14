@@ -222,6 +222,14 @@ Scrape files like `magica/resource/image_web/announce/announce_memoria_1016.png`
 
 Scrape files like `magica/resource/image_web/announce/announce_266_1.png`
 
+## scrape_event_currency.py
+
+Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/event/accomplish/EventAccomplishDeck.js#L590)
+
+```js
+"/magica/resource/image_web/common/icon/event/icon_" + l + "_f.png"
+```
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
@@ -239,7 +247,6 @@ Put off due to difficulty.
 
 Related to generating event related identifiers:
 ```
-event/accomplish/EventAccomplishDeck.js:            f.style.cssText = "background:url('/magica/resource/image_web/common/icon/event/icon_" + l + "_f.png') left top no-repeat; background-size:26px 26px;";
 formation/DeckFormation.js:            l.style.cssText = "background:url('/magica/resource/image_web/common/icon/event/icon_" + g + "_f.png') left top no-repeat; background-size:26px 26px;";
 quest/EventQuest.js:              c.specialQuestObj.useItemImagePath = "/magica/resource/image_web/item/" + (-1 < f.indexOf("EVENT_") ? "event/" : "main/") + f.toLowerCase() + ".png";
 campaign/quiz/CampaignQuizTop.js:          a.doc.getElementById("firstClearImg").innerHTML = '<img src="/magica/resource/image_web/item/' + e + "/" + l + '.png">';
