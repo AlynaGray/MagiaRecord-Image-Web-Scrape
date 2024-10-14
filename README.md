@@ -353,5 +353,8 @@ _common/backboneCommon.js:    return "/magica/resource/image_web/common/icon/" +
 ```
 
 ### To be investigated
+- Stickers
+- Announce Chara
+- Magirepo
 ```
 ```
