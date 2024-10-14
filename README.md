@@ -284,6 +284,15 @@ Because there are so many candidates for announcements like `magica/resource/ima
 
 Based on inspecting [MagiRecoStatic](https://github.com/GrygrFlzr/MagiRecoStatic/tree/master/magica/resource/image_web/banner/common)
 
+## scrape_chapter.py
+
+Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/template/quest/MainQuestBranch.html#L4) and [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/template/quest/MainQuestSingleRaid.html#L7)
+
+```html
+"/magica/resource/image_web/chapter/chapter_<%= chapterId %>_a.png"
+"/magica/resource/image_web/chapter/chapter_<%= chapterId %>.png") le
+```
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
