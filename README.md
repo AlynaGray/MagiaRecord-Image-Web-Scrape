@@ -236,6 +236,16 @@ Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9
 
 This didn't actually scrape anything and doesn't correspond to everything. I made this after misreading a filepath. I'm leaving this here for informational purposes to show that there's nothing with this pattern.
 
+## scrape_event_currency_3.py
+
+Handles event portion of [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/quest/EventQuest.js#L102)
+
+**Does not handle stickers or chara assets**
+
+```js
+"/magica/resource/image_web/item/" + (-1 < f.indexOf("EVENT_") ? "event/" : "main/") + f.toLowerCase() + ".png"
+```
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
