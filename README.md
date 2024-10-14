@@ -301,6 +301,24 @@ Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9
 '/magica/resource/image_web/banner/gacha/gachabanner_<%="<%= gachaId %\>"%>_m.png'
 ```
 
+## scrape_gacha_banner_2
+
+Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/template/present/GachaHistory.html#L36), [these lines](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/template/gacha/GachaTop.html#L9), and inspection of existing archives.
+
+```html
+'/magica/resource/image_web/gacha/' + model.gachaSchedule.imageBanner + '_s.png'
+"/magica/resource/image_web/gacha/<%='<%= model.imageBanner ? model.imageBanner : "gacha_"+model.id+"_banner" %\>'%>_l.png"
+"/magica/resource/image_web/gacha/<%='<%= model.viewParameterMap.IMAGE_DETAIL %\>'%>.png"
+"/magica/resource/image_web/gacha/<%='<%= model.imageChara ? model.imageChara : "gacha_"+model.id+"card"
+```
+
+Scraper split into two parts for efficiency
+
+### scrape_gacha_banner_2_first_pass.py
+### scrape_gacha_banner_2_second_pass.py
+
+Scraped after archive app download deadline of Oct 14 15:00 JST.
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
