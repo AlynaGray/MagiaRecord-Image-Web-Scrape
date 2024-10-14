@@ -280,6 +280,10 @@ Because there are so many candidates for announcements like `magica/resource/ima
 ### scrape_announce_4_c1.py
 ### scrape_announce_4_c2.py
 
+## scrape_weekly_banner.py
+
+Based on inspecting [MagiRecoStatic](https://github.com/GrygrFlzr/MagiRecoStatic/tree/master/magica/resource/image_web/banner/common)
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
