@@ -240,6 +240,12 @@ This didn't actually scrape anything and doesn't correspond to everything. I mad
 
 Handles event portion of [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/quest/EventQuest.js#L102)
 
+**Does not handle stickers or chara assets**
+
+```js
+"/magica/resource/image_web/item/" + (-1 < f.indexOf("EVENT_") ? "event/" : "main/") + f.toLowerCase() + ".png"
+```
+
 ## scrape_event_treasure.py
 
 Based on [these lines](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/view/quest/QuestResultView.js#L439), [these lines](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/patrol/PatrolResult.js#L134), and [these lines](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/patrol/PatrolLumpResult.js#L148)
@@ -250,11 +256,6 @@ Based on [these lines](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ed
 ```
 
 
-**Does not handle stickers or chara assets**
-
-```js
-"/magica/resource/image_web/item/" + (-1 < f.indexOf("EVENT_") ? "event/" : "main/") + f.toLowerCase() + ".png"
-```
 
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
