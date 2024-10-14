@@ -255,6 +255,14 @@ Based on [these lines](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ed
 "/magica/resource/image_web/common/treasure/event/" + a + "_open.png"
 ```
 
+## scrape_campaign_exchange.py
+
+Handles campaign exchanges in main in [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/js/quest/EventQuest.js#L102)
+
+```js
+"/magica/resource/image_web/item/" + (-1 < f.indexOf("EVENT_") ? "event/" : "main/") + f.toLowerCase() + ".png"
+```
+
 ## scrape announce
 
 Because there are so many candidates for announcements like `magica/resource/image_web/announce/announce_2201072_a.png`, multiple scripts are made to allow for them to run in parallel.
