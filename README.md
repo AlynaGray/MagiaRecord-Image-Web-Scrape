@@ -255,7 +255,22 @@ Based on [these lines](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ed
 "/magica/resource/image_web/common/treasure/event/" + a + "_open.png"
 ```
 
+## scrape announce
 
+Because there are so many candidates for announcements like `magica/resource/image_web/announce/announce_2201072_a.png`, multiple scripts are made to allow for them to run in parallel.
+
+### scrape_announce_3_a1.py
+### scrape_announce_3_a2.py
+### scrape_announce_3_a3.py
+### scrape_announce_3_a4.py
+### scrape_announce_3_c1.py
+### scrape_announce_3_c2.py
+### scrape_announce_4_a1.py
+### scrape_announce_4_a2.py
+### scrape_announce_4_a3.py
+### scrape_announce_4_a4.py
+### scrape_announce_4_c1.py
+### scrape_announce_4_c2.py
 
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
