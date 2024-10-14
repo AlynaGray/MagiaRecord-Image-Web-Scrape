@@ -293,6 +293,14 @@ Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9
 "/magica/resource/image_web/chapter/chapter_<%= chapterId %>.png") le
 ```
 
+## scrape_gacha_banner.py
+
+Based on [this line](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/template/present/GachaHistory.html#L43) and inspection of archivies.
+
+```html
+'/magica/resource/image_web/banner/gacha/gachabanner_<%="<%= gachaId %\>"%>_m.png'
+```
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
