@@ -323,6 +323,14 @@ Scraped after archive app download deadline of Oct 14 15:00 JST.
 
 Scrape the Uwasa repo for full paths.
 
+## scrape_title_grade.py
+
+Based on [these lines](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ede9c8a62442049e96865e8d2b9242033de/magica/template/user/SetTitlePopup.html#L7) and inspection of existing archives.
+
+```html
+"/magica/resource/image_web/common/grade/<%= title.title.baseImage %>.png"
+```
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
