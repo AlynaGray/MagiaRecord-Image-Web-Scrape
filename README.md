@@ -369,6 +369,6 @@ _common/backboneCommon.js:    return "/magica/resource/image_web/common/icon/" +
 - Announce Chara
 - Magirepo
 - Event chara assets
-- Titles
+- Title text
 ```
 ```
