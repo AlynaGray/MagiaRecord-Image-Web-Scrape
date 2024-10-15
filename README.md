@@ -319,6 +319,10 @@ Scraper split into two parts for efficiency
 
 Scraped after archive app download deadline of Oct 14 15:00 JST.
 
+## scrape_uwasa_repo.py
+
+Scrape the Uwasa repo for full paths.
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
