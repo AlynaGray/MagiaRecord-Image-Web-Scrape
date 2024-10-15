@@ -7,6 +7,6 @@
 [submodule "MITaMa"]
 	path = MITaMa
 	url = git@gitlab.com:puella-care/MITaMa.git
-[submodule "magica/resource/image_web/announce/uwasa"]
-	path = magica/resource/image_web/announce/uwasa
+[submodule "uwasa"]
+	path = uwasa
 	url = git@github.com:LiviaMedeiros/uwasa.git
