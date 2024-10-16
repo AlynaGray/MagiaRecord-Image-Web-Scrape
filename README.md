@@ -267,6 +267,13 @@ Handles campaign exchanges in main in [this line](https://github.com/LiviaMedeir
 
 Because there are so many candidates for announcements like `magica/resource/image_web/announce/announce_2201072_a.png`, multiple scripts are made to allow for them to run in parallel.
 
+Comprehensive scrapers:
+
+### scrape_announce_3.py
+### scrape_announce_4.py
+
+Shorter scrapers used while the comphrehensive scrapers were running:
+
 ### scrape_announce_3_a1.py
 ### scrape_announce_3_a2.py
 ### scrape_announce_3_a3.py
@@ -279,6 +286,8 @@ Because there are so many candidates for announcements like `magica/resource/ima
 ### scrape_announce_4_a4.py
 ### scrape_announce_4_c1.py
 ### scrape_announce_4_c2.py
+
+The comprehensive scrapers finshed after archive app download deadline of Oct 14 15:00 JST.
 
 ## scrape_weekly_banner.py
 
