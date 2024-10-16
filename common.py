@@ -67,8 +67,9 @@ def scrape(session: requests.Session, asset: str) -> None:
         # The game server always returns a html page if the asset is not found
         content = response.content
         if content == NONEXISTENT_ASSET_PAGE:
+            print(f"Not found {asset}")
             return
-        print(f"{GREEN}Found {asset}!{RESET}")
+        print(f"{GREEN}Found     {asset}!{RESET}")
         os.makedirs(os.path.dirname(Path(asset)), exist_ok=True)
         with open(Path(asset), mode="wb") as file:
             file.write(content)
