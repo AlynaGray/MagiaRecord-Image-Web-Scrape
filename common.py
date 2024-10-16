@@ -44,15 +44,14 @@ def scrape_all(candidates: callable) -> None:
     if not nonexistent_asset_page_correct():
         exit(1)
     
-    # I haven't figured out if using ThreadPoolExecutor acutally improves performance
-    # or if sessions is thread safe when using it like this.
-    with requests.Session() as session, ThreadPoolExecutor(max_workers=1) as executor:
+    # I believe requests isn't thread safe when using cookies, but this should be fine
+    with requests.Session() as session, ThreadPoolExecutor(max_workers=10) as executor:
         for asset in candidates():
             # Use loop to retry after each connection, so transient network errors don't stop the program
             while True:
                 try:
                     print(f"Scraping: {asset}")
-                    executor.submit(scrape(session, asset))
+                    executor.submit(scrape, session, asset)
                     break
                 except Exception as e:
                     print(f"{RED}{e}{RESET}")
