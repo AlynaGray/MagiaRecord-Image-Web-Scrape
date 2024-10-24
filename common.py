@@ -50,7 +50,7 @@ def scrape_all(candidates: callable) -> None:
             # Use loop to retry after each connection, so transient network errors don't stop the program
             while True:
                 try:
-                    print(f"Scraping: {asset}")
+                    print(f"Queuing   {asset}")
                     executor.submit(scrape, session, asset)
                     break
                 except Exception as e:
