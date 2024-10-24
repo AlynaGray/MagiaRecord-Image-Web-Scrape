@@ -40,6 +40,7 @@ def scrape_all_in_dirs_generator(filename: str, prerequisite_file: str | None = 
         yield f"{dirpath}/{filename}"
 
 
+# Scrape all paths given by a generator function
 def scrape_all(candidates: callable) -> None:
     if not nonexistent_asset_page_correct():
         exit(1)
