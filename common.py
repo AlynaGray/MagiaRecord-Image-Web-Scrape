@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import Generator
 import os
 import random
+import re
 import requests
 
 BASE_URL = "https://android.magi-reco.com/"
@@ -28,10 +29,46 @@ RED = "\033[0;31m"
 RESET = "\033[0m"
 
 
+# Perform a regex search on all text files in root_dir (recursive)
+# The matches are then used as paths for scraping
+def scrape_all_regex(root_dir: str, pattern: str) -> None:
+    scrape_all(lambda: scrape_all_regex_generator(root_dir, pattern))
+
+
+def scrape_all_regex_generator(root_dir: str, pattern: str) -> Generator[str, None, None]:
+    matches = search_recursively(root_dir, pattern)
+    for m in matches:
+        yield m
+
+
+def search_recursively(directory, pattern):
+    matches_found = []
+    for dirpath, _, files in os.walk(directory):
+        for file in files:
+            file_path = os.path.join(dirpath, file)
+            try:
+                matches = search_in_file(file_path, pattern)
+                matches_found.extend(matches)
+            except Exception as e:
+                print(f"Error reading {file_path}: {e}")
+    return matches_found
+
+
+def search_in_file(file_path, pattern):
+    with open(file_path, 'r', encoding='utf-8') as f:
+        try:
+            content = f.read()
+        except UnicodeDecodeError:
+            return []
+        matches = re.findall(pattern, content)
+        return matches
+
+
 # Scrape for filename in every directory inside magica recursively.
 # If prerequisite_file is not None, only scrape in directories with prerquisite_file
 def scrape_all_in_dirs(filename: str, prerequisite_file: str | None = None) -> None:
     scrape_all(lambda: scrape_all_in_dirs_generator(filename, prerequisite_file))
+
 
 def scrape_all_in_dirs_generator(filename: str, prerequisite_file: str | None = None) -> Generator[str, None, None]:
     for dirpath, _, files in os.walk("magica"):
