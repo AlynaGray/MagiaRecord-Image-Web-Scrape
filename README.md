@@ -180,7 +180,7 @@ Based on search for `navi_0` and `navi_1` in `bella_donna` and existing archives
 
 ## scrape_all_specific_paths.py
 
-Search through text files in `bella_donna`, `puella-historia`, and `MITaMa` for full paths and download them. Interestingly, there were some full paths that weren't in the server e.g. `/magica/resource/image_web/regularEvent/senmetsu/common/bg_map_enemy.png` and `magica/resource/image_web/item/main/cure_ap_10.png`. I guess they're unimplemented features or things that were changed or removed during development.
+Search through text files in `bella_donna`, `puella-historia`, and `MITaMa` for full png paths and download them. Interestingly, there were some full paths that weren't in the server e.g. `/magica/resource/image_web/regularEvent/senmetsu/common/bg_map_enemy.png` and `magica/resource/image_web/item/main/cure_ap_10.png`. I guess they're unimplemented features or things that were changed or removed during development.
 
 ## scrape_announce_common.py
 
@@ -341,6 +341,12 @@ Based on [these lines](https://github.com/LiviaMedeiros/bella_donna/blob/a5809ed
 ```html
 "/magica/resource/image_web/common/grade/<%= title.title.baseImage %>.png"
 ```
+
+Scraped after archive app download deadline of Oct 14 15:00 JST.
+
+## scrape_all_specific_jpg_paths.py
+
+Search through text files in `bella_donna`, `puella-historia`, and `MITaMa` for full jpg paths and download them.
 
 Scraped after archive app download deadline of Oct 14 15:00 JST.
 
