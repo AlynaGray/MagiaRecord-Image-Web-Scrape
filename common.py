@@ -41,9 +41,9 @@ def scrape_all_regex_generator(root_dir: str, pattern: str) -> Generator[str, No
         yield m
 
 
-def search_recursively(directory, pattern):
+def search_recursively(root_dir, pattern):
     matches_found = []
-    for dirpath, _, files in os.walk(directory):
+    for dirpath, _, files in os.walk(root_dir):
         for file in files:
             file_path = os.path.join(dirpath, file)
             try:
