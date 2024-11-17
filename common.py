@@ -83,12 +83,12 @@ def scrape_all(candidates: callable) -> None:
         exit(1)
     
     # I believe requests isn't thread safe when using cookies, but this should be fine
-    with requests.Session() as session, ThreadPoolExecutor(max_workers=10) as executor:
+    with requests.Session() as session, ThreadPoolExecutor(max_workers=20) as executor:
         for asset in candidates():
             # Use loop to retry after each connection, so transient network errors don't stop the program
             while True:
                 try:
-                    print(f"Queuing   {asset}")
+                    # print(f"Queuing   {asset}")
                     executor.submit(scrape, session, asset)
                     break
                 except Exception as e:
