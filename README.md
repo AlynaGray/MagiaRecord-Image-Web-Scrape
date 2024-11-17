@@ -350,6 +350,10 @@ Search through text files in `bella_donna`, `puella-historia`, and `MITaMa` for 
 
 Scraped after archive app download deadline of Oct 14 15:00 JST.
 
+## scrape_branch_event_chara.py
+
+Based on inspection of existing archives. Scrapes files like `magica/resource/image_web/item/event/event_branch_1005_chara_3026.png`. Only checks files associated with branch events.
+
 ## Remaining lines
 Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
 
