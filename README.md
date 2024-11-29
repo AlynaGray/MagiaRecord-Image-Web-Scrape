@@ -1,10 +1,10 @@
 # Magia Record Image_Web Scrape
 
-This is a semi-manual scrape of Magia Record's `magica/resource/image_web` directory for archival. The pattens for scraping are manually constructed by looking at the JS files and patterns in already archived assets in [puella-historia](https://gitlab.com/puella-care/puella-historia) and [bella_donna](https://github.com/LiviaMedeiros/bella_donna).
+This is a semi-manual scrape of Magia Record's `magica/resource/image_web` directory for archival. The pattens for scraping are manually constructed by looking at the JS files and patterns in already archived assets in [puella-historia](https://gitlab.com/puella-care/puella-historia), [MITaMa](https://gitlab.com/puella-care/MITaMa), [bella_donna](https://github.com/LiviaMedeiros/bella_donna), and [uwasa](https://github.com/LiviaMedeiros/uwasa).
 
-Although EoS has already occurred, the asset servers are still online. I guess the servers will stay up while the archive app is sitll available to download, which is until October 14, 2024.
+The assets scraped for this repo are stored in `magica/resource/image_web`. Other archives are included as submodules because some of the scripts use them.
 
-Only `scrape_memora.py` and `scrape_tower_buttons.py` were run before EoS. The servers remained up after, but I'm noting this just in case the assets changed after EoS.
+After EoS, the asset servers remained online until November 29, 2024 JST (don't know exactly when it went down). Only `scrape_memora.py` and `scrape_tower_buttons.py` were run before EoS. It doesn't seem like the assets were changed or removed after EoS, although I didn't rigorously check.
 
 Note: Some of the excerpts have their single and double quotes modified to match. Not sure why they don't match in the original.
 
