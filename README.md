@@ -6,6 +6,8 @@ The assets scraped for this repo are stored in `magica/resource/image_web`. Othe
 
 After EoS, the asset servers remained online until November 29, 2024 JST (don't know exactly when it went down). Only `scrape_memora.py` and `scrape_tower_buttons.py` were run before EoS. It doesn't seem like the assets were changed or removed after EoS, although I didn't rigorously check.
 
+**This archive is NOT comprehensive because the scraping was done manually and I didn't get around to every type of asset. For example, I didn't scrape any stickers. The other archives listed above may have assets that are not here.**
+
 Note: Some of the excerpts have their single and double quotes modified to match. Not sure why they don't match in the original.
 
 ## scrape_memora.py
@@ -359,7 +361,7 @@ Based on inspection of existing archives. Scrapes files like `magica/resource/im
 Extended version of `scrape_branch_event_chara.py`, just in case any events other than branch events had chara files in the same format. Did not find any.
 
 ## Remaining lines
-Lines referencing image_web files that don't have a scraper built from them yet. The scraper may not work yet, and this list might not be comprehensive
+Lines referencing image_web files that don't have a scraper built from them. The scraper may not work, and this list might not be comprehensive.
 
 ### Unknown formats
 Can't find examples of these assets in existing archives.
@@ -391,7 +393,9 @@ view/shop/ShopTopPartsView.js:          content: "<img class='detailImg' src='/m
 _common/backboneCommon.js:    return "/magica/resource/image_web/common/icon/" + (c ? b + ".png" : b + "_f.png")
 ```
 
-### To be investigated
+### Not Investigated
+Stuff I didn't get to before the servers went down.
+
 - Stickers
 - Announce Chara
 - Magirepo
